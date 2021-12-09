@@ -1,9 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledTitle = styled.h3`
+  background-color: #5C1A1B;
+  color: #AED4E6;
+`
 
 const PhotoTitle = props => {
-  console.log(props);
   return (
-    <h3>{props.image.title}</h3>
+    <StyledTitle>{props.image.title}</StyledTitle>
   );
 }
 

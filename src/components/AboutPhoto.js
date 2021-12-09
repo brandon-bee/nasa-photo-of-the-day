@@ -1,12 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledDate = styled.p`
+  color: #AED4E6;
+`
+
+const StyledExplanation = styled.p`
+  color: #1AC8ED;
+`
+
+const StyledCopyright = styled.p`
+  color: #AED4E6;
+`
 
 const AboutPhoto = props => {
   return (
-    <div>
-      <p>Date: {props.image.date}</p>
-      <p>{props.image.explanation}</p>
-      <p>Copyright {props.image.copyright}</p>
-    </div>
+    <>
+      <StyledDate>Date: {props.image.date}</StyledDate>
+      <StyledExplanation>{props.image.explanation}</StyledExplanation>
+      <StyledCopyright>Copyright {props.image.copyright}</StyledCopyright>
+    </>
   );
 }
 

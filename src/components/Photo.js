@@ -1,10 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledImg = styled.img`
+  
+`
 
 const Photo = props => {
   return (
-    <div>
-      <img src={props.image.url} alt='NASA Pic of the Day' />
-    </div>
+    <>
+      <StyledImg src={props.image.url} alt='NASA Pic of the Day' />
+    </>
   );
 }
 

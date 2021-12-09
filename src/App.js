@@ -4,13 +4,19 @@ import axios from 'axios';
 import PhotoTitle from './components/PhotoTitle';
 import Photo from "./components/Photo";
 import AboutPhoto from "./components/AboutPhoto";
+import styled from "styled-components";
+
+const StyledTitle = styled.h1`
+  color: #AED4E6;
+  background-color: #8C2155;
+`
+
+const StyledBody = styled.div`
+  background-color: #AF7595;
+`
 
 function App() {
   const [image, setImage] = useState(null);
-  const drew = {
-    age: 50,
-    homewtown: 'Sequim',
-  }
 
   useEffect(() => {
     const fetchImage = () => {
@@ -26,10 +32,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>NASA Photo of the Day Generator</h1>
+    <StyledBody className="App">
+      <StyledTitle>NASA Photo of the Day Generator</StyledTitle>
       {
-        image && <PhotoTitle image={image} person={drew} />
+        image && <PhotoTitle image={image} />
       }
       {
         image && <Photo image={image} />
@@ -37,7 +43,7 @@ function App() {
       {
         image && <AboutPhoto image={image} />
       }
-    </div>
+    </StyledBody>
   );
 }
 
