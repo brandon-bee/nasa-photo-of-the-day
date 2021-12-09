@@ -7,6 +7,10 @@ import AboutPhoto from "./components/AboutPhoto";
 
 function App() {
   const [image, setImage] = useState(null);
+  const drew = {
+    age: 50,
+    homewtown: 'Sequim',
+  }
 
   useEffect(() => {
     const fetchImage = () => {
@@ -25,13 +29,13 @@ function App() {
     <div className="App">
       <h1>NASA Photo of the Day Generator</h1>
       {
-        image && <PhotoTitle image={image} />
+        image && <PhotoTitle image={image} person={drew} />
       }
       {
-        <Photo />
+        image && <Photo image={image} />
       }
       {
-        <AboutPhoto />
+        image && <AboutPhoto image={image} />
       }
     </div>
   );

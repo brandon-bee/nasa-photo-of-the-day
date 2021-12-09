@@ -3,9 +3,9 @@ import React from 'react';
 const AboutPhoto = props => {
   return (
     <div>
-      <p>Date: {props.date}</p>
-      <p>{props.explanation}</p>
-      <p>Copyright {props.copyright}</p>
+      <p>Date: {props.image.date}</p>
+      <p>{props.image.explanation}</p>
+      <p>Copyright {props.image.copyright}</p>
     </div>
   );
 }

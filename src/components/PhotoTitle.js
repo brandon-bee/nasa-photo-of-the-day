@@ -1,8 +1,7 @@
 import React from 'react';
 
 const PhotoTitle = props => {
-  console.log(props)
-  console.log(props.image.title)
+  console.log(props);
   return (
     <h3>{props.image.title}</h3>
   );
